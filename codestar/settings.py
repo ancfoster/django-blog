@@ -46,7 +46,15 @@ INSTALLED_APPS = [
     'cloudinary',
     'django_summernote',
     'blog',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
 ]
+SITE_ID = 1
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -141,4 +149,6 @@ DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-ancfoster-djangoblog-s856u1y3zb1.ws-eu74.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-ancfoster-djangoblog-s856u1y3zb1.ws-eu75.gitpod.io']
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
